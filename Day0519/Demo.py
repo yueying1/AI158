@@ -19,17 +19,36 @@
 #     # 将当前行添加到杨辉三角列表中
 #     triangle.append(current_row)
 
+# 
+# triangle = []
+# new_rows = int(input('输入杨辉三角的行数：'))
+# for row in range(new_rows):
+#     current_row = [1]
+#     thePreviousLine = row - 1
+#     if thePreviousLine >= 0 :
+#         for i in range(1,row):
+#             element = triangle[thePreviousLine][i - 1] + triangle[thePreviousLine][i]
+#             current_row.append(element)
+#         current_row.append(1)
+#     triangle.append(current_row)
+# 
+# print(triangle)
 
-triangle = []
-new_rows = int(input('输入杨辉三角的行数：'))
-for row in range(new_rows):
-    current_row = [1]
-    thePreviousLine = row - 1
-    if thePreviousLine >= 0 :
-        for i in range(1,row):
-            element = triangle[thePreviousLine][i - 1] + triangle[thePreviousLine][i]
-            current_row.append(element)
-        current_row.append(1)
-    triangle.append(current_row)
 
-print(triangle)
+
+# list1 = [8, 2, 16, 7, 13, -8]
+# for j in range(len(list1)-1):
+#     for i in range( len(list1)-1-j):
+#         if list1[i] > list1[i + 1]:
+#             n = list1[i]
+#             list1[i] = list1[i + 1]
+#             list1[i + 1] = n
+#
+# print(list1)
+
+
+
+
+# n, m = 1, 2
+# n, m = m, n
+# print(n,'   ', m)
