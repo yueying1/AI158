@@ -52,3 +52,39 @@
 # n, m = 1, 2
 # n, m = m, n
 # print(n,'   ', m)
+
+
+def partition(arr1, low, high):
+    i = (low - 1)  # 最小元素索引
+    pivot = arr1[high]
+
+    for j in range(low, high):
+
+        # 当前元素小于或等于 pivot
+        if arr1[j] <= pivot:
+            i = i + 1
+            arr1[i], arr1[j] = arr1[j], arr1[i]
+
+    arr1[i + 1], arr1[high] = arr1[high], arr1[i + 1]
+    return i + 1
+
+
+# arr1[] --> 排序数组
+# low  --> 起始索引
+# high  --> 结束索引
+
+# 快速排序函数
+def quickSort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
+
+
+arr2 = [10, 7, 8, 9, 1, 5]
+n = len(arr2)
+quickSort(arr2, 0, n - 1)
+print("排序后的数组:")
+for i in range(n):
+    print("%d" % arr2[i])
