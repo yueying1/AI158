@@ -6,3 +6,5 @@ __pycache__/
 build/
 dist/
 *.spec
+data/car_train_0110.csv
+data/car_testA_0110.csv
